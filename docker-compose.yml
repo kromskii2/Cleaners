@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: my_project_app
+    environment:
+      - TEMP=/path/to/temp
+    volumes:
+      - .:/app
+    command: python src/main.py
